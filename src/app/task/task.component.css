@@ -1,0 +1,10 @@
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+#tasks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
