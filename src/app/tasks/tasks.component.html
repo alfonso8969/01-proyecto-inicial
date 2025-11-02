@@ -1,0 +1,21 @@
+<div class="tasks">
+ <div class="tasks-header">
+  <h2>Tareas de</h2>
+  <h4>{{ user?.name }}</h4>
+ </div>
+ <div class="tasks-add">
+  <button type="button" class="add-task" (click)="addTask(user?.id)">Agregar tarea
+    <i class="fa fa-plus"></i>
+  </button>
+ </div>
+</div>
+<ul id="tasks-list">
+  @for (task of tasks; track task) {
+  <li [class.completed]="task.completed">
+    <div>
+      <app-task [task]="task"></app-task>
+
+    </div>
+  </li>
+  }
+</ul>

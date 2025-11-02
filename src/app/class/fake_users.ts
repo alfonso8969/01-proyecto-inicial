@@ -1,7 +1,7 @@
 export const FAKE_USERS = [
   {
     id: 'u1',
-    name: 'Antonia Céspedes',
+    name: 'Antonia Céspedes Merino',
     avatar: 'usuario-1.png',
     email: 'antonia@example.com',
     phone: '123-456-7890',
@@ -9,7 +9,7 @@ export const FAKE_USERS = [
   },
   {
     id: 'u2',
-    name: 'Emilia Torres',
+    name: 'Emilia Torres González',
     avatar: 'usuario-2.png',
     email: 'emilia@example.com',
     phone: '234-567-8901',

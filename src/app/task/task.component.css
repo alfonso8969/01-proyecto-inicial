@@ -3,8 +3,83 @@
   color: gray;
 }
 
-#tasks {
-  list-style: none;
-  padding: 0;
+summary {
+  border-radius: 6px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+details {
+  padding: 1rem;
+  color: #25113d;
+  background-color: #bf9ee5;
+}
+
+h2 {
   margin: 0;
+}
+
+time {
+  color: #3c2c50;
+}
+
+.actions {
+  text-align: left;
+  display: flex;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.actions button {
+  margin-top: 10px;
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background-color: #380774;
+  color: #decdf2;
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.delete {
+  background-color: #7a031f !important;
+}
+
+.description {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  color: #2e1a3e;
+}
+
+.task-status {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+label[for^="task-"] {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  color: #25113d;
+}
+
+input[type="checkbox"] {
+  margin-left: 0.5rem;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.actions .edit:hover,
+.actions button:active {
+  background-color: #4a0774 !important;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3) !important;
+}
+
+.actions .delete:hover {
+  background-color: #a50b2e !important;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3) !important;
 }

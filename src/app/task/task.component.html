@@ -1,23 +1,18 @@
-<div class="tasks">
-  <h2>Lista de tareas</h2>
-  <h3>Tareas de {{ user.name }}</h3>
-</div>
-<ul id="tasks">
-  @for (task of tasks; track task) {
-  <li [class.completed]="task.completed">
-    <div>
-      <details>
-        <label for="task-{{ task.id }}">Completada</label>
-        <input id="task-{{ task.id }}" type="checkbox" [checked]="task.completed" title="Tasks" (change)="taskCompleted(task.id)">
-        <summary>{{ task.title }}</summary>
-        <p>{{ task.description }}</p>
-        <div>
-          <p>Creada el: {{ task.createdAt | date: 'dd-MM-YY' }}</p>
-          <p>Vence el: {{ task.dueDate | date: 'dd-MM-YY' }}</p>
-        </div>
-      </details>
-
-    </div>
-  </li>
-  }
-</ul>
+<details>
+  <div class="task-status">
+    <input id="task-{{ task?.id }}" type="checkbox" [checked]="task?.completed" title="Tasks"
+      (change)="taskCompleted(task?.id)">
+    <label for="task-{{ task?.id }}">Completada</label>
+  </div>
+  <summary>{{ task?.title }}</summary>
+  <ul class="actions">
+    <li><button type="button" class="edit" (click)="editTask(task?.id)">Editar</button></li>
+    <li><button type="button" class="delete" (click)="deleteTask(task?.id)">Eliminar</button></li>
+  </ul>
+  <p class="description">{{ task?.description }}</p>
+  <div>
+    <p>Creada el: {{ task?.createdAt | date: 'dd-MM-YY' }}</p>
+    <p *ngIf="!task?.completed">Vence el: {{ task?.dueDate | date: 'dd-MM-YY' }}</p>
+    <p *ngIf="task?.completed">Completada el: {{ task?.completedAt | date: 'dd-MM-YY' }}</p>
+  </div>
+</details>

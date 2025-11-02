@@ -2,28 +2,26 @@
 
 <main>
   <ul id="users">
-    @for (user of users; track user) {
-      <li>
-        <app-user
-          [user]="user" (select)="onUserSelect($event)"
-        ></app-user>
-      </li>
+    @for (user of users; track user.id) {
+    <li>
+      <app-user [user]="user" (select)="onUserSelect($event)"></app-user>
+    </li>
     }
   </ul>
   @if (user && tasks.length > 0) {
-    <section id="tasks">
-      <app-task [user]="user!" [tasks]="user.tasks!"></app-task>
-    </section>
+  <section id="tasks">
+    <app-tasks [user]="user!" [tasks]="user.tasks!"></app-tasks>
+  </section>
   } @else if (user && tasks.length === 0){
-    <section id="no-users">
-      <app-task [user]="user!" [tasks]="user.tasks!"></app-task>
-      <p>No hay tareas.</p>
-    </section>
-   } @else {
-    <section id="no-tasks">
-      <h2>Lista de tareas</h2>
-      <p>No hay usuario seleccionado.</p>
-      <p>Seleccione un usuario para ver sus tareas.</p>
-    </section>
+  <section id="no-users">
+    <app-tasks [user]="user!" [tasks]="user.tasks!"></app-tasks>
+    <p>No hay tareas.</p>
+  </section>
+  } @else {
+  <section id="no-tasks">
+    <h2>Lista de tareas</h2>
+    <p>No hay usuario seleccionado.</p>
+    <p>Seleccione un usuario para ver sus tareas.</p>
+  </section>
   }
 </main>

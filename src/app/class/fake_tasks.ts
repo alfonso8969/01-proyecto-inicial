@@ -149,7 +149,7 @@ export const FAKE_TASKS = [
     completed: true,
     createdAt: new Date('2025-11-26T10:00:00'),
     dueDate: new Date('2025-12-03T10:00:00'),
-    completedAt: null,
+    completedAt: new Date('2025-11-28T15:30:00'),
   },
   {
     id: 16,

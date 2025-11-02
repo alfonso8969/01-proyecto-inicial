@@ -1,0 +1,55 @@
+.completed {
+  text-decoration: line-through;
+  color: rgb(245, 8, 8);
+}
+
+#tasks-list,
+.actions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tasks {
+  display: flex;
+  /* Alinea los elementos en el eje principal (horizontal por defecto),
+    poniendo el máximo espacio posible entre ellos. */
+  justify-content: space-between;
+  /* Opcional: centra verticalmente los elementos si tienen alturas diferentes */
+  align-items: center;
+  /* Opcional: añade un poco de espacio alrededor */
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.tasks-header {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #751edd;
+}
+
+.tasks-add {
+  margin-bottom: 1rem;
+}
+
+.tasks-add button {
+  font: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #380774;
+  color: #decdf2;
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.tasks-add button:hover {
+  background-color: #4a0774;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+

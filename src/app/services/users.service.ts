@@ -6,7 +6,7 @@ import { dbStorage } from "./db.storage";
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class UsersService {
   private usersKey: string = 'users';
   private storage: StorageInterface = inject(dbStorage);
 

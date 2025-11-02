@@ -6,7 +6,7 @@ import { dbStorage } from "./db.storage";
 @Injectable({
   providedIn: 'root'
 })
-export class TaskService {
+export class TasksService {
   private tasksKey: string = 'tasks';
   private storage: StorageInterface = inject(dbStorage);
   constructor() {}

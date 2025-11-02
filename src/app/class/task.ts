@@ -1,11 +1,4 @@
-import { TaskService } from './../services/task.service';
-import { Inject } from "@angular/core";
-
 export class Task {
-
-  @Inject(TaskService) private taskService?: TaskService;
-
-
 
   constructor(
     public id: number,

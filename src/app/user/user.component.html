@@ -1,6 +1,6 @@
 <div>
   <button type="button" (click)="onUserClick()">
-    <img [src]="userAvatarPath" alt="{{ user.name }}" [title]="user.email">
-    <span>{{ user.name }}</span>
+    <img [src]="userAvatarPath" alt="{{ user?.name }}" [title]="user?.email">
+    <span>{{ user?.name }}</span>
   </button>
 </div>
