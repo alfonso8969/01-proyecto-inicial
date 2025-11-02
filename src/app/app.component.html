@@ -10,14 +10,20 @@
       </li>
     }
   </ul>
-  @if (user) {
+  @if (user && tasks.length > 0) {
     <section id="tasks">
-      <app-task [user]="userSelected!" [tasks]="tasks"></app-task>
+      <app-task [user]="user!" [tasks]="user.tasks!"></app-task>
     </section>
-  }
-   @else {
+  } @else if (user && tasks.length === 0){
+    <section id="no-users">
+      <app-task [user]="user!" [tasks]="user.tasks!"></app-task>
+      <p>No hay tareas.</p>
+    </section>
+   } @else {
     <section id="no-tasks">
+      <h2>Lista de tareas</h2>
+      <p>No hay usuario seleccionado.</p>
       <p>Seleccione un usuario para ver sus tareas.</p>
     </section>
-   }
+  }
 </main>

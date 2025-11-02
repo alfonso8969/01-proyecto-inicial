@@ -1,8 +1,12 @@
-import { FAKE_TASKS } from "./fake_tasks";
+import { TaskService } from './../services/task.service';
+import { Inject } from "@angular/core";
 
 export class Task {
 
-  tasks = FAKE_TASKS;
+  @Inject(TaskService) private taskService?: TaskService;
+
+
+
   constructor(
     public id: number,
     public userId: string,
@@ -11,12 +15,7 @@ export class Task {
     public completed: boolean,
     public createdAt: Date = new Date(),
     public dueDate?: Date,
-    public completedAt?: Date
+    public completedAt?: Date | null
   ) {}
 
-
-
-  userTasks(userId: string) {
-    return this.tasks.filter(task => task.userId === userId) as unknown as Task[];
-  }
 }
